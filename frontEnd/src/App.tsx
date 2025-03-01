@@ -1,13 +1,19 @@
 import './App.css'
+import Navbar from "../components/navbar"
+import LandingView from "../components/homepage/sectionLandingView"
+import DeliciousStory from "../components/homepage/sectionDeliciousStory"
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
-      <p className='flex justify-center items-center font-bold text-5xl h-screen w-screen'>
-        MGC
-      </p>
+    {/* Navigation bar */}
+     <div className='flex flex-col items-center'>
+      <Navbar />
+      <LandingView  />
+      <DeliciousStory />
+     </div>
     </>
-  )
+  )  
 }
 
 export default App

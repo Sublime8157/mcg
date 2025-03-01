@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.navbar-items {
+    cursor: pointer;
+}
+.navbar-items:hover {
+    opacity: 50%;
+}
+
