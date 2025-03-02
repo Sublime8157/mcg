@@ -2,7 +2,7 @@ import React from "react";
 
 const deliciousStory: React.FC = () => {
     return (
-        <div className="h-screen w-full">
+        <section className="h-screen w-full">
             <div className="flex flex-row justify-evenly h-9/12 w-full">
                 <div className="flex w-80 flex-col gap-8 h-full justify-evenly">
                     <div className="font-bold text-xl">MGC</div>
@@ -25,7 +25,7 @@ const deliciousStory: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const landingView: React.FC = () => {
     return (
-        <div className='justify-center gap-4 flex flex-col items-center h-screen'>
+        <section className='justify-center gap-4 flex flex-col items-center h-screen'>
             <div>
                 <h1 className='text-3xl text-pink-400 font-bold'>
                     Perth, WA
@@ -22,7 +22,7 @@ const landingView: React.FC = () => {
                     Explore Menu
                 </button>
             </div>
-        </div>
+        </section>
     )
 }
 

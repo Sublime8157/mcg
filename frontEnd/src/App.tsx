@@ -6,7 +6,6 @@ import DeliciousStory from "../components/homepage/sectionDeliciousStory"
 const App: React.FC = () => {
   return (
     <>
-    {/* Navigation bar */}
      <div className='flex flex-col items-center'>
       <Navbar />
       <LandingView  />
