@@ -15,12 +15,12 @@ const deliciousStory: React.FC = () => {
                 <div className="h-full flex flex-row gap-4">
                     <div className="h-full">
                         <div className="h-full">
-                            <img src="/images/deliciousSection.jpg" className="h-full"></img>
+                            <img src="/images/deliciousSection.jpg" className="h-full rounded-sm shadow-lg"></img>
                         </div>
                     </div>
                     <div className="h-full">
                         <div className="h-full">
-                            <img src="/images/deliciousSection2.jpg" className="h-full w-96"></img>
+                            <img src="/images/deliciousSection2.jpg" className="h-full rounded-sm shadow-lg w-96"></img>
                         </div>
                     </div>
                 </div>

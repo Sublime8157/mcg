@@ -1,0 +1,7 @@
+export  { default as DeliciousStory } from "./sectionDeliciousStory"
+export  { default as FeaturedDelicacies } from "./sectionFeaturedDelicacies"
+export  { default as FeaturedMenu } from "./sectionFeaturedMenu"
+export  { default as FeaturedOn } from "./sectionFeaturedOn"
+export  { default as Feedback } from "./sectionFeedback"
+export  { default as HappyHours } from "./sectionHappyHours"
+export  { default as LandingView } from "./sectionLandingView"

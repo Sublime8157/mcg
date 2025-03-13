@@ -1,8 +1,7 @@
 import './App.css'
 import Navbar from "../components/navbar"
-import LandingView from "../components/homepage/sectionLandingView"
-import DeliciousStory from "../components/homepage/sectionDeliciousStory"
-
+import { LandingView, DeliciousStory, FeaturedOn, FeaturedDelicacies, FeaturedMenu, HappyHours, Feedback}  from "../components/homepage/homepageIndex";
+import Footer from "../components/footer"
 const App: React.FC = () => {
   return (
     <>
@@ -10,7 +9,13 @@ const App: React.FC = () => {
       <Navbar />
       <LandingView  />
       <DeliciousStory />
+      <FeaturedOn />
+      <FeaturedDelicacies />
+      <FeaturedMenu />
+      <HappyHours />
+      <Feedback />
      </div>
+     <Footer />
     </>
   )  
 }
