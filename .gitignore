@@ -1,5 +1,4 @@
 node_modules 
 package-lock.json
-
+package-lock.json
 frontEnd/package-lock.json
-frontEnd/components/navbar.tsx

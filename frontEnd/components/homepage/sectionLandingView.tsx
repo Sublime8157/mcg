@@ -2,8 +2,8 @@ import React from 'react';
 
 const landingView: React.FC = () => {
     return (
-        <section className='justify-center gap-4 flex flex-col items-center h-screen'>
-            <div>
+        <section className='justify-center w-full gap-4 flex flex-col items-center h-screen'>
+            <div className=''>
                 <h1 className='text-3xl text-pink-400 font-bold'>
                     Perth, WA
                 </h1>
@@ -11,7 +11,7 @@ const landingView: React.FC = () => {
             <h1 className='text-6xl text-pink-400 font-bold'>
                 Filipino Cuisine
             </h1>
-            <p className='mt-10 w-11/12 text-center'>
+            <p className='mt-10 w-8/12 text-center'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tempore earum quasi at sapiente omnis corrupti asperiores dolore? Soluta, ullam?
             </p>
             <div className='mt-10'>
