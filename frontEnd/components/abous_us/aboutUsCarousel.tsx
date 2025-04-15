@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface CarouselPops {
     images: string[]; 
@@ -11,11 +11,19 @@ const Carousel: React.FC<CarouselPops> = ({ images }) => {
     const nextSlide = () => setCurrent((prev) => (prev + 1) % total);
     const prevSlide = () => setCurrent((prev) => (prev - 1 + total) % total);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+    
+
     return(
         <>
             <div className="w-full p-20 items-center justify-center flex">
                 <div className="relative w-[850px] overflow-hidden">
-                    <div className="flex space-between w-full transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${current * 100}%)` }}>
+                    <div className="flex space-between w-full" style={{ transform: `translateX(-${current * 100}%)` }}>
                         {images.map((img, index) => (
                             <img key={index} src={img} alt={`Slide ${index}`} className="rounded-sm shadow-lg h-80 object-cover w-[850px] flex-shrink-0" width={850} />
                         ))}
