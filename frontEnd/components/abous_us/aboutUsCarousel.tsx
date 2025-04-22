@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
+import useVisibilityObserver from "../../hooks/useVisibilityObserver";
 interface CarouselPops {
     images: string[]; 
 }
@@ -7,9 +7,11 @@ interface CarouselPops {
 const Carousel: React.FC<CarouselPops> = ({ images }) => {
     const [current, setCurrent] = useState(0);
     const total = images.length;
-
+    const { targetRef, isVisible } = useVisibilityObserver()
+    
     const nextSlide = () => setCurrent((prev) => (prev + 1) % total);
     const prevSlide = () => setCurrent((prev) => (prev - 1 + total) % total);
+    
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,13 +19,12 @@ const Carousel: React.FC<CarouselPops> = ({ images }) => {
         }, 5000);
         return () => clearInterval(interval);
     }, []);
-    
 
     return(
         <>
-            <div className="w-full p-20 items-center justify-center flex">
+            <div ref={targetRef} className={`animate w-full p-20 items-center justify-center flex ${isVisible ? `opacity-100 translate-x-0` : `opacity-0 translate-x-20`}`}>
                 <div className="relative w-[850px] overflow-hidden">
-                    <div className="flex space-between w-full" style={{ transform: `translateX(-${current * 100}%)` }}>
+                    <div className="animate flex space-between w-full" style={{ transform: `translateX(-${current * 100}%)` }}>
                         {images.map((img, index) => (
                             <img key={index} src={img} alt={`Slide ${index}`} className="rounded-sm shadow-lg h-80 object-cover w-[850px] flex-shrink-0" width={850} />
                         ))}

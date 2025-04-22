@@ -1,5 +1,5 @@
 import React from "react";
-import KnowMore from "../abous_us/knowMore"
+import KnowMore from "../knowMore"
 import OurResto from "../abous_us/ourResto"
 import Carousel from "../abous_us/aboutUsCarousel"
 import FewWords from "../abous_us/aboutUsFewWords"
@@ -14,7 +14,9 @@ const imageUrls: string[] = [
 const AboutUsIndex: React.FC = () => {
     return(
         <div className="flex flex-col w-full">
-            <KnowMore />
+            <KnowMore 
+                header="About Us." 
+                subHeader="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam officiis quod recusandae fugit commodi quisquam impedit repudiandae dignissimos officia maxime! Officia excepturi eius itaque soluta. Tempore, vel. Atque provident quidem quis magnam dignissimos aliquam ipsa totam. Esse dignissimos laborum dolorem!" />
             <OurResto />
             <Carousel images={imageUrls}/>
             <FewWords />

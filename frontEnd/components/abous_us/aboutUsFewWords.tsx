@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
+import useVisibilityObserver from "../../hooks/useVisibilityObserver";
 
 const FewWords: React.FC = () => {
+    const { targetRef, isVisible } = useVisibilityObserver()
+
     return(
-        <div className="w-full flex flex-row items-center pb-10 justify-evenly">
-            <div className="flex flex-col  gap-8 items-start">
+        <div ref={targetRef} className="w-full flex flex-row items-center pb-10 justify-evenly">
+            <div className={`flex flex-col  gap-8 items-start animate ${isVisible ? `opacity-100 translate-x-0` : `opacity-0 -translate-x-20`}`}>
                 <h1 className="text-5xl" style={{ fontWeight: "bold" }}>A Few Words About Us</h1>
                 <p className="text-xl">Serving best filipino foods</p>
                 <hr className="border-none w-24 rounded bg-pink-400  h-1"></hr>
@@ -12,7 +15,7 @@ const FewWords: React.FC = () => {
                     Book Order
                 </button>
             </div>
-            <div><img src="images/fewWords.jpg" className="shadow-lg rounded-lg" width={500} height={750}/></div>
+            <div className={`animate ${isVisible ? `opacity-100 translate-x-0` : `opacity-0 translate-x-20`}`}><img src="images/fewWords.jpg" className="shadow-lg rounded-lg" width={500} height={750}/></div>
         </div>
     )
 }

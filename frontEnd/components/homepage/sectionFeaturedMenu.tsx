@@ -1,9 +1,12 @@
-import React from "react"; 
+import React, { useState, useEffect, useRef } from "react"; 
+import useVisibilityObserver from "../../hooks/useVisibilityObserver";
 
 const FeaturedMenu: React.FC = () => {
     const items = Array.from({ length: 6 })
+    const { targetRef, isVisible } = useVisibilityObserver()
+    
     return (
-        <div className="px-48 w-full flex start items-center flex-col">
+        <div ref={targetRef} className={`animate px-48 w-full flex start items-center flex-col ${isVisible ? `opacity-100 translate-y-0` : `opacity-0 -translate-y-10`}`} >
             <div className="w-full flex justify-start flex-col items-center">
                 <div className="flex-wrap w-12/12 gap-24 justify-center flex flex-row ">
                     {items.map((_, index) => (

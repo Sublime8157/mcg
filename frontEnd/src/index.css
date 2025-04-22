@@ -18,3 +18,7 @@
     background-image: url('/images/landingView.png');
     background-attachment: fixed !important;
 }
+
+.animate {
+    transition-duration: 1s;
+}
