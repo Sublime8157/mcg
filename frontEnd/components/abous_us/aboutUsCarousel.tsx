@@ -22,8 +22,8 @@ const Carousel: React.FC<CarouselPops> = ({ images }) => {
 
     return(
         <>
-            <div ref={targetRef} className={`animate w-full p-20 items-center justify-center flex ${isVisible ? `opacity-100 translate-x-0` : `opacity-0 translate-x-20`}`}>
-                <div className="relative w-[850px] overflow-hidden">
+            <div className={`animate w-full p-20 items-center justify-center flex`}>
+                <div ref={targetRef} className={`relative w-[850px] overflow-hidden animate ${isVisible ? `opacity-100 translate-x-0` : `opacity-0 translate-x-20`}`}>
                     <div className="animate flex space-between w-full" style={{ transform: `translateX(-${current * 100}%)` }}>
                         {images.map((img, index) => (
                             <img key={index} src={img} alt={`Slide ${index}`} className="rounded-sm shadow-lg h-80 object-cover w-[850px] flex-shrink-0" width={850} />

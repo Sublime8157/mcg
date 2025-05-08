@@ -13,14 +13,16 @@ const imageUrls: string[] = [
 
 const AboutUsIndex: React.FC = () => {
     return(
-        <div className="flex flex-col w-full">
-            <KnowMore 
-                header="About Us." 
-                subHeader="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam officiis quod recusandae fugit commodi quisquam impedit repudiandae dignissimos officia maxime! Officia excepturi eius itaque soluta. Tempore, vel. Atque provident quidem quis magnam dignissimos aliquam ipsa totam. Esse dignissimos laborum dolorem!" />
-            <OurResto />
-            <Carousel images={imageUrls}/>
-            <FewWords />
-        </div>
+        <>
+            <div className="flex flex-col w-full">
+                <KnowMore 
+                    header="About Us." 
+                    subHeader="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam officiis quod recusandae fugit commodi quisquam impedit repudiandae dignissimos officia maxime! Officia excepturi eius itaque soluta. Tempore, vel. Atque provident quidem quis magnam dignissimos aliquam ipsa totam. Esse dignissimos laborum dolorem!" />
+                <OurResto />
+                <Carousel images={imageUrls}/>
+                <FewWords />
+            </div>
+        </>
     )
 }
 

@@ -11,13 +11,13 @@ import React from "react";
 const HomePage: React.FC = () => {
     return(
         <>
-        <LandingView />
-        <DeliciousStory />
-        <FeaturedOn />
-        <FeaturedDelicacies />
-        <FeaturedMenu />
-        <Feedback />
-        <HappyHours />
+            <LandingView />
+            <DeliciousStory />
+            <FeaturedOn />
+            <FeaturedDelicacies />
+            <FeaturedMenu />
+            <Feedback />
+            <HappyHours />
         </>
     )
 }
