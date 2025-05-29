@@ -17,6 +17,8 @@
 .featuredDelicacies {
     background-image: url('/images/landingView.png');
     background-attachment: fixed !important;
+    background-repeat:  no-repeat;
+    background-size: cover;
 }
 
 .animate {
